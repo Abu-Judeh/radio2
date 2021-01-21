@@ -1,0 +1,44 @@
+
+<div class="header">
+  <h1>radio</h1>
+  <p>citeis stations</p>
+</div>
+<div class="container">
+  <div class="row justify-content-md-center">
+    
+    <div class="all">
+      <label>Choose a city:</label>
+      
+      <select name="" id="">
+        
+          <option value="">
+              <select name="" id="">
+                
+              </select>
+          </option>
+        
+      </select>
+      
+      
+      
+      <select name="citeisss" id="city"  (change)="giveSrc($event)">
+       <ng-container *ngFor="let x of citeis">
+         
+          <optgroup label="">
+            <option  value="{{x.name}}">
+              {{x.name}}
+              <select name="c" id="c2" *ngFor="let y of x.radios">
+                 {{y.radioName}}
+              </select>
+
+            </option>
+          </optgroup>
+        
+        
+      </ng-container>
+      </select>
+      
+        <audio controls="" src="{{source}}" type="audio/mpeg" class="radioPlayer"> </audio>
+      </div>
+    </div>
+  </div>
